@@ -33,14 +33,23 @@ h1, h2, h3, p {
     margin: 0 auto;
 }
 
-/* .btn {
+.btn {
     display: inline-block;
     text-decoration: none;
     padding: .5em 1.25em;
-    background: blue;
-    color: white;
+    /* different approach to css variables where we didn't declare it in the beginning */
+    background: var(--clr-accent, rgb(106, 106, 255));
+    color: var(--clr-text, white);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.125rem;
     border-radius: .25em;
-} */
+    transition: 
+        transform 250ms ease-in-out,
+        opacity 175ms linear;
+}
+
+.btn:hover, .btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
