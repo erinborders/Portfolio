@@ -24,11 +24,26 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+section {
+  padding: 5em 0;
+}
+
 .container {
   width: 85%;
   /* 65 * 16 will translate em to pixels  */
   max-width: 65em;
   margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.column > * {
+  flex-basis: 30%;
+  min-width: 15em;
 }
 
 .btn {
@@ -55,6 +70,13 @@ h1, h2, h3, p {
   /* can also use clamp with font size if using sass  */
   line-height: 1;
   text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 3rem;
 }
 
 .spacing > * + * {
