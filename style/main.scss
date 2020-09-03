@@ -38,6 +38,8 @@ section {
     margin: 0 auto;
 }
 
+
+
 .column {
     display: flex;
     // will put a gap between my flex items 
@@ -163,4 +165,12 @@ section {
             font-size: 1rem;
         }
     }
+}
+
+.project__image {
+    
+}
+
+.project {
+    background: grey;
 }
