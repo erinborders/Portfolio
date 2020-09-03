@@ -37,7 +37,7 @@ section {
 
 .column {
   display: flex;
-  gap: 2em;
+  gap: 3em;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -97,10 +97,45 @@ section {
 }
 @supports (background-blend-mode: lighten) {
   .hero {
-    background-color: blue;
+    background-color: #6262ff;
     /* allows you to blend layers - really nice for blending images and colors or gradients  */
     background-blend-mode: lighten;
   }
+}
+
+.featured {
+  background: aliceblue;
+}
+.featured__project {
+  position: relative;
+  transform: scale(0.85);
+  transition: transform 250ms ease-in-out;
+  text-decoration: none;
+  text-align: center;
+}
+.featured__project:hover, .featured__project:focus {
+  transform: scale(1);
+}
+.featured__project:hover .featured__details, .featured__project:focus .featured__details {
+  opacity: 1;
+}
+.featured__project::after {
+  content: "";
+  top: -1.75rem;
+  left: -1.75rem;
+  position: absolute;
+  padding: 19rem 19rem 0 0;
+  background: white;
+  z-index: -1;
+}
+.featured__details {
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+.featured__details span {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

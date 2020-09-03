@@ -41,7 +41,7 @@ section {
 .column {
     display: flex;
     // will put a gap between my flex items 
-    gap: 2em;
+    gap: 3em;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -107,7 +107,7 @@ section {
     background-size: cover;
     // can be nested inside because using sass but otherwise it would be outside 
     @supports (background-blend-mode: lighten) {
-        background-color: blue;
+        background-color: rgb(98, 98, 255);
     /* allows you to blend layers - really nice for blending images and colors or gradients  */
         background-blend-mode: lighten;
     }
@@ -115,4 +115,52 @@ section {
     // a parallax scroll effect
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+// the & in sass is basically a repeat of whatever it's nested inside 
+// anything nested is within the scope of what it's nested in
+.featured {
+    // just to separate it a bit from the next section 
+    background: aliceblue;
+
+    &__project {
+        // so this is for everything with the class featured__project
+        position: relative; // because we're going to have pseudo elements that come into play
+        transform: scale(.85);
+        transition: transform 250ms ease-in-out;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover, &:focus {
+            transform: scale(1);
+
+            .featured__details {
+                opacity: 1; // turns project details on and off
+            }
+        }
+
+        &::after {
+            // anytime you have a pseudo element you have to give it content so it exists
+            content: '';
+            top: -1.75rem;
+            left: -1.75rem;
+            position: absolute; // which is why we gave the other element a relative position
+            padding: 19rem 19rem 0 0; // square
+            // border-radius: 50%;  round off the edges to a circle
+            background: white;
+            z-index: -1;
+        }
+
+    }
+
+    &__details {
+        opacity: 0;
+        transition: opacity 250ms linear;
+
+        span {
+            display: block;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+    }
 }
