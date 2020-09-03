@@ -52,9 +52,13 @@ h1, h2, h3, p {
 
 .header-title {
   font-size: 4rem;
-  /* can also use clamp with font size  */
+  /* can also use clamp with font size if using sass  */
   line-height: 1;
   text-transform: uppercase;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
 }
 
 .hero {
@@ -66,6 +70,8 @@ h1, h2, h3, p {
   /* to fix repeating transparent image, bring in a radial gradient 
   radial-gradient(#444, #111) */
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 @supports (background-blend-mode: lighten) {
   .hero {
