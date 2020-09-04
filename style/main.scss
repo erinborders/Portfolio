@@ -117,6 +117,11 @@ section {
     // a parallax scroll effect
     background-attachment: fixed;
     background-repeat: no-repeat;
+
+    .container {
+        border: 2px solid white;
+        padding: 2em;
+    }
 }
 
 // the & in sass is basically a repeat of whatever it's nested inside 
@@ -172,5 +177,38 @@ section {
 }
 
 .project {
-    background: grey;
+    background: radial-gradient(white, aliceblue);
+    // background: radial-gradient(var(--clr-inner, white), var(--clr-outer, aliceblue)) 
+    // the above means I could use a variable to change the gradient colors if I wanted
+    // by adding --clr-inner: red (for example) on the actual item in question
+    // otherwise it'll just use white and aliceblue
+    // you can use this for light and dark modes
+    padding: 3em;
+    border-radius: 1em;
+    margin-bottom: 3em;
+    text-align: center;
+
+    &__title {
+        font-size: 2em;
+        line-height: 1em;
+        margin: .5em auto;
+    }
+
+    &__image {
+        // TO DO: push to the left so that the image and paragraph are 2 columns 
+        // both sticking out over the background a bit with the paragraph having a white
+        // background and maybe stagger them?
+    }
+    
 }
+
+// an example of changing the custom variable
+// .first {
+//     --clr-accent: red;
+// }
+
+@media (min-width: 46em) {
+// TO DO: FIGURE OUT STAGGERED IMAGE ALIGNMENT
+   
+}
+
