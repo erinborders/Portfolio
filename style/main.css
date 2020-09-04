@@ -164,5 +164,9 @@ section {
   line-height: 1em;
   margin: 0.5em auto;
 }
+.moving__project {
+  max-width: 25em;
+  margin: 0;
+}
 
 /*# sourceMappingURL=main.css.map */

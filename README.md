@@ -5,6 +5,7 @@
 Animate on Scroll
 - make regular projects scroll in from sides
 
+
 Generic
 - replace images
 - create nav bar
