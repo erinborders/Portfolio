@@ -180,8 +180,9 @@ section {
     &__details {
         opacity: 0;
         transition: opacity 250ms linear;
-        text-align: right;
-        
+        text-align: center;
+        padding-right: 3em;
+
         span {
             display: block;
             font-weight: 700;
