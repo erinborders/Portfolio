@@ -107,6 +107,14 @@ section {
   padding: 2em;
 }
 
+.separator {
+  padding: 10em 0;
+  background-image: url(https://picsum.photos/250);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 .featured {
   background: aliceblue;
 }
