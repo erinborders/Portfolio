@@ -3,6 +3,7 @@
 9.4.20 To Do:
 
 Animate on Scroll
+- incorporate AOS library
 - make regular projects scroll in from sides
 
 

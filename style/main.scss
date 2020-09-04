@@ -64,6 +64,35 @@ section {
     }
 }
 
+.myprojects__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "first_image first_image . ."
+        ". . second_image second_image"
+        "third_image third_image . .";
+}
+
+.first__project {
+    grid-area: first_image;
+}
+
+.second__project {
+    grid-area: second_image;
+    justify-self: end;
+    text-align: right;
+
+    .project__image {
+        border: 1px solid red;
+        display: inline;
+    }
+}
+
+.third__project {
+    grid-area: third_image;
+}
+
 .btn {
     display: inline-block;
     text-decoration: none;
