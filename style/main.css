@@ -9,7 +9,7 @@
 /* classic resets to do for all css are setting the body margin, line height,
  the image max width and display, and margin for h1,2,3 and p  */
 /* start off css designing for mobile and try to design generic/reusable
-classes first */
+ classes first */
 body {
   margin: 0;
   line-height: 1.5;
@@ -20,7 +20,10 @@ img {
   display: block;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
 
@@ -46,31 +49,6 @@ section {
   min-width: 15em;
 }
 
-.myprojects__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "first_image" "second_image" "third_image";
-  row-gap: 10em;
-}
-
-.first__project {
-  grid-area: first_image;
-}
-
-.second__project {
-  grid-area: second_image;
-  justify-self: end;
-  text-align: right;
-}
-.second__project .project__image {
-  display: inline;
-}
-
-.third__project {
-  grid-area: third_image;
-}
-
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -85,7 +63,8 @@ section {
   transition: transform 250ms ease-in-out, opacity 175ms linear;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   transform: scale(1.1);
   opacity: 0.9;
 }
@@ -115,7 +94,7 @@ section {
   padding: 10em 0;
   background-image: url(https://picsum.photos/250);
   /* to fix repeating transparent image, bring in a radial gradient 
-  radial-gradient(#444, #111) */
+        radial-gradient(#444, #111) */
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -189,30 +168,65 @@ section {
   line-height: 1em;
   margin: 0.5em auto;
 }
-.moving__project {
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "image1 text1 text1 ." ". text2 text2 image2" "image3 text3 text3 .";
-  column-gap: 1em;
+.project__text {
+  display: none;
 }
-.moving__project #portfolio__offer {
-  grid-area: image1;
-}
-.moving__project #portfolio__text {
-  grid-area: text1;
-}
-.moving__project #landingpage__offer {
-  grid-area: image2;
-}
-.moving__project #landingpage__text {
-  grid-area: text2;
-}
-.moving__project #businesspage__offer {
-  grid-area: image3;
-}
-.moving__project #businesspage__text {
-  grid-area: text3;
+
+@media (min-width: 46em) {
+  .project__text {
+    display: block;
+  }
+
+  .myprojects__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "first_image" "second_image" "third_image";
+    row-gap: 10em;
+  }
+
+  .first__project {
+    grid-area: first_image;
+  }
+
+  .second__project {
+    grid-area: second_image;
+    justify-self: end;
+    text-align: right;
+  }
+  .second__project .project__image {
+    display: inline;
+  }
+
+  .third__project {
+    grid-area: third_image;
+  }
+
+  .moving__project {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "image1 text1 text1 ." ". text2 text2 image2" "image3 text3 text3 .";
+    column-gap: 1em;
+  }
+  .moving__project #portfolio__offer {
+    grid-area: image1;
+  }
+  .moving__project #portfolio__text {
+    grid-area: text1;
+  }
+  .moving__project #landingpage__offer {
+    grid-area: image2;
+  }
+  .moving__project #landingpage__text {
+    grid-area: text2;
+  }
+  .moving__project #businesspage__offer {
+    grid-area: image3;
+  }
+  .moving__project #businesspage__text {
+    grid-area: text3;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

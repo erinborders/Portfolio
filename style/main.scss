@@ -3,31 +3,34 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* classic resets to do for all css are setting the body margin, line height,
  the image max width and display, and margin for h1,2,3 and p  */
 
- /* start off css designing for mobile and try to design generic/reusable
+/* start off css designing for mobile and try to design generic/reusable
  classes first */
 
 body {
-    margin: 0;
-    line-height: 1.5;
+  margin: 0;
+  line-height: 1.5;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
-h1, h2, h3, p {
-    margin: 0;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 section {
-    padding: 5em 0;
+  padding: 5em 0;
 }
 
 // main {
@@ -40,220 +43,177 @@ section {
 // }
 
 .container {
-    width: 85%;
-    /* 65 * 16 will translate em to pixels  */
-    max-width: 65em;
-    margin: 0 auto;
-    
+  width: 85%;
+  /* 65 * 16 will translate em to pixels  */
+  max-width: 65em;
+  margin: 0 auto;
 }
-
-
 
 .column {
-    display: flex;
-    // will put a gap between my flex items 
-    gap: 3em;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  // will put a gap between my flex items
+  gap: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    // all direct children of my column 
-    &>* {
-        flex-basis: 30%;
-        // telling them the ideal width for starting the flex movement 
-        min-width: 15em;
-    }
-}
-
-.myprojects__container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        "first_image"
-        "second_image"
-        "third_image";
-    row-gap: 10em;
-    
-}
-
-.first__project {
-    grid-area: first_image;
-
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    
-}
-
-.second__project {
-    grid-area: second_image;
-    justify-self: end;
-    text-align: right;
-
-    .project__image {
-        display: inline;
-    }
-}
-
-.third__project {
-    grid-area: third_image;
+  // all direct children of my column
+  & > * {
+    flex-basis: 30%;
+    // telling them the ideal width for starting the flex movement
+    min-width: 15em;
+  }
 }
 
 .btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: .5em 1.25em;
-    /* different approach to css variables where we didn't declare it in the beginning */
-    background: var(--clr-accent, rgb(106, 106, 255));
-    color: var(--clr-text, white);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.125rem;
-    border-radius: .25em;
-    transition: 
-        transform 250ms ease-in-out,
-        opacity 175ms linear;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  /* different approach to css variables where we didn't declare it in the beginning */
+  background: var(--clr-accent, rgb(106, 106, 255));
+  color: var(--clr-text, white);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out, opacity 175ms linear;
 }
 
-.btn:hover, .btn:focus {
-    transform: scale(1.1);
-    opacity: .9;
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .header-title {
-    font-size: 4rem;
-    /* can also use clamp with font size if using sass  */
-    line-height: 1;
-    text-transform: uppercase;
+  font-size: 4rem;
+  /* can also use clamp with font size if using sass  */
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-.section-title{
-    text-align: center;
-    font-size: 2.5rem;
-    // make sure to see what it looks like at all screen sizes 
-    line-height: 1;
-    margin-bottom: 3rem;
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  // make sure to see what it looks like at all screen sizes
+  line-height: 1;
+  margin-bottom: 3rem;
 }
 
-// spacing isn't going to do anything but the direct children inside of it will 
-// any element that is the adjacent sibling that is the direct child of spacing 
+// spacing isn't going to do anything but the direct children inside of it will
+// any element that is the adjacent sibling that is the direct child of spacing
 // so the header title doesn't get a top margin but the paragraph and button do
 .spacing > * + * {
-    margin-top: var(--spacer, 2rem);
+  margin-top: var(--spacer, 2rem);
 }
 
 .hero {
-    color: white;
-    text-shadow: 0 1px 2px black;
-    text-align: center;
-    padding: 10em 0;
-    background-image: url(https://picsum.photos/250);
-        /* to fix repeating transparent image, bring in a radial gradient 
+  color: white;
+  text-shadow: 0 1px 2px black;
+  text-align: center;
+  padding: 10em 0;
+  background-image: url(https://picsum.photos/250);
+  /* to fix repeating transparent image, bring in a radial gradient 
         radial-gradient(#444, #111) */
-    background-size: cover;
-    // can be nested inside because using sass but otherwise it would be outside 
-    @supports (background-blend-mode: lighten) {
-        background-color: rgb(98, 98, 255);
+  background-size: cover;
+  // can be nested inside because using sass but otherwise it would be outside
+  @supports (background-blend-mode: lighten) {
+    background-color: rgb(98, 98, 255);
     /* allows you to blend layers - really nice for blending images and colors or gradients  */
-        background-blend-mode: lighten;
-    }
-    // having a fixed background attachment and no repeat background makes 
-    // a parallax scroll effect
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+  }
+  // having a fixed background attachment and no repeat background makes
+  // a parallax scroll effect
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 
-    .container {
-        border: 2px solid white;
-        padding: 2em;
-    }
+  .container {
+    border: 2px solid white;
+    padding: 2em;
+  }
 }
 
 .separator {
-    padding: 10em 0;
-    background-image: url(https://picsum.photos/250);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  padding: 10em 0;
+  background-image: url(https://picsum.photos/250);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-// the & in sass is basically a repeat of whatever it's nested inside 
+// the & in sass is basically a repeat of whatever it's nested inside
 // anything nested is within the scope of what it's nested in
 .featured {
-    // just to separate it a bit from the next section 
-    background: aliceblue;
+  // just to separate it a bit from the next section
+  background: aliceblue;
 
-    &__project {
-        // so this is for everything with the class featured__project
-        position: relative; // because we're going to have pseudo elements that come into play
-        transform: scale(.85);
-        transition: transform 250ms ease-in-out;
-        text-decoration: none;
-        text-align: center;
+  &__project {
+    // so this is for everything with the class featured__project
+    position: relative; // because we're going to have pseudo elements that come into play
+    transform: scale(0.85);
+    transition: transform 250ms ease-in-out;
+    text-decoration: none;
+    text-align: center;
 
-        &:hover, &:focus {
-            transform: scale(1);
+    &:hover,
+    &:focus {
+      transform: scale(1);
 
-            .featured__details {
-                opacity: 1; // turns project details on and off
-            }
-        }
-
-        &::after {
-            // anytime you have a pseudo element you have to give it content so it exists
-            content: '';
-            top: -1.75rem;
-            left: -1.75rem;
-            position: absolute; // which is why we gave the other element a relative position
-            padding: 19rem 19rem 0 0; // square
-            // border-radius: 50%;  round off the edges to a circle
-            background: white;
-            z-index: -1;
-        }
-
+      .featured__details {
+        opacity: 1; // turns project details on and off
+      }
     }
 
-    &__details {
-        opacity: 0;
-        transition: opacity 250ms linear;
-        text-align: center;
-        padding-right: 3em;
-
-        span {
-            display: block;
-            font-weight: 700;
-            font-size: 1rem;
-            
-        }
+    &::after {
+      // anytime you have a pseudo element you have to give it content so it exists
+      content: "";
+      top: -1.75rem;
+      left: -1.75rem;
+      position: absolute; // which is why we gave the other element a relative position
+      padding: 19rem 19rem 0 0; // square
+      // border-radius: 50%;  round off the edges to a circle
+      background: white;
+      z-index: -1;
     }
+  }
+
+  &__details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+    text-align: center;
+    padding-right: 3em;
+
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
 }
 
 .project__image {
-    
 }
 
 .project {
-    background: radial-gradient(white, aliceblue);
-    // background: radial-gradient(var(--clr-inner, white), var(--clr-outer, aliceblue)) 
-    // the above means I could use a variable to change the gradient colors if I wanted
-    // by adding --clr-inner: red (for example) on the actual item in question
-    // otherwise it'll just use white and aliceblue
-    // you can use this for light and dark modes
-    padding: 3em;
-    border-radius: 1em;
-    margin-bottom: 3em;
-    text-align: center;
+  background: radial-gradient(white, aliceblue);
+  // background: radial-gradient(var(--clr-inner, white), var(--clr-outer, aliceblue))
+  // the above means I could use a variable to change the gradient colors if I wanted
+  // by adding --clr-inner: red (for example) on the actual item in question
+  // otherwise it'll just use white and aliceblue
+  // you can use this for light and dark modes
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 3em;
+  text-align: center;
 
-    &__title {
-        font-size: 2em;
-        line-height: 1em;
-        margin: .5em auto;
-    }
+  &__title {
+    font-size: 2em;
+    line-height: 1em;
+    margin: 0.5em auto;
+  }
 
-    &__image {
-        // TO DO: push to the left so that the image and paragraph are 2 columns 
-        // both sticking out over the background a bit with the paragraph having a white
-        // background and maybe stagger them?
-    }
-    
+  &__text {
+      display: none;
+  }
 }
 
 // an example of changing the custom variable
@@ -261,44 +221,77 @@ section {
 //     --clr-accent: red;
 // }
 
-.moving__project {
+@media (min-width: 46em) {
+
+    .project__text {
+        display: block;
+    }
+
+  .myprojects__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "first_image"
+      "second_image"
+      "third_image";
+    row-gap: 10em;
+  }
+
+  .first__project {
+    grid-area: first_image;
+
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+  }
+
+  .second__project {
+    grid-area: second_image;
+    justify-self: end;
+    text-align: right;
+
+    .project__image {
+      display: inline;
+    }
+  }
+
+  .third__project {
+    grid-area: third_image;
+  }
+
+  .moving__project {
     // max-width: 30em;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        "image1 text1 text1 ."
-        ". text2 text2 image2"
-        "image3 text3 text3 .";
+    grid-template-areas:
+      "image1 text1 text1 ."
+      ". text2 text2 image2"
+      "image3 text3 text3 .";
     column-gap: 1em;
 
     #portfolio__offer {
-        grid-area: image1;
+      grid-area: image1;
     }
 
     #portfolio__text {
-        grid-area: text1;
+      grid-area: text1;
     }
 
     #landingpage__offer {
-        grid-area: image2;
+      grid-area: image2;
     }
 
     #landingpage__text {
-        grid-area: text2;
+      grid-area: text2;
     }
 
     #businesspage__offer {
-        grid-area: image3;
+      grid-area: image3;
     }
 
     #businesspage__text {
-        grid-area: text3;
+      grid-area: text3;
     }
+  }
 }
-
-@media (min-width: 46em) {
-// TO DO: FIGURE OUT STAGGERED IMAGE ALIGNMENT
-   
-}
-
