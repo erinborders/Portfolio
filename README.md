@@ -1,10 +1,13 @@
 # Erin Borders' Portfolio
 
-9.4.20 To Do:
 
+## Tracking progress
 
-Generic
-- replace images
+9.4.20:
+- integrate AOS library
+- animate products to slide in from left and right
+- replace product images
+
+Future:
 - create nav bar
-- turn "projects" animated section into offered products
 - add labels on products over images with white border

@@ -15,9 +15,13 @@ body {
   line-height: 1.5;
 }
 
+.image__container {
+  height: 50%;
+  width: 50%;
+}
+
 img {
   max-width: 100%;
-  display: block;
 }
 
 h1,
@@ -156,6 +160,11 @@ section {
   font-size: 1rem;
 }
 
+.moving__project {
+  display: flex;
+  justify-content: center;
+}
+
 .project {
   background: radial-gradient(white, aliceblue);
   padding: 3em;
@@ -172,9 +181,19 @@ section {
   display: none;
 }
 
+.moving__project {
+  margin: 0;
+}
+
 @media (min-width: 46em) {
   .project__text {
     display: block;
+  }
+
+  .image__container {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 
   .myprojects__container {

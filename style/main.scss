@@ -17,9 +17,16 @@ body {
   line-height: 1.5;
 }
 
+.image__container {
+    height: 50%;
+    width: 50%;
+    // object-fit: contain;
+}
+
 img {
   max-width: 100%;
-  display: block;
+//   max-height: 100%;
+//   display: block;
 }
 
 h1,
@@ -190,7 +197,13 @@ section {
   }
 }
 
+.moving__project {
+    display: flex;
+    justify-content: center;
+}
+
 .project__image {
+
 }
 
 .project {
@@ -214,6 +227,11 @@ section {
   &__text {
       display: none;
   }
+
+}
+
+.moving__project {
+    margin: 0;
 }
 
 // an example of changing the custom variable
@@ -225,6 +243,12 @@ section {
 
     .project__text {
         display: block;
+    }
+
+    .image__container {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 
   .myprojects__container {
