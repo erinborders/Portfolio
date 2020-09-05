@@ -48,9 +48,10 @@ section {
 
 .myprojects__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "first_image first_image . ." ". . second_image second_image" "third_image third_image . .";
+  grid-template-areas: "first_image" "second_image" "third_image";
+  row-gap: 10em;
 }
 
 .first__project {
@@ -63,7 +64,6 @@ section {
   text-align: right;
 }
 .second__project .project__image {
-  border: 1px solid red;
   display: inline;
 }
 
@@ -190,8 +190,29 @@ section {
   margin: 0.5em auto;
 }
 .moving__project {
-  max-width: 25em;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "image1 text1 text1 ." ". text2 text2 image2" "image3 text3 text3 .";
+  column-gap: 1em;
+}
+.moving__project #portfolio__offer {
+  grid-area: image1;
+}
+.moving__project #portfolio__text {
+  grid-area: text1;
+}
+.moving__project #landingpage__offer {
+  grid-area: image2;
+}
+.moving__project #landingpage__text {
+  grid-area: text2;
+}
+.moving__project #businesspage__offer {
+  grid-area: image3;
+}
+.moving__project #businesspage__text {
+  grid-area: text3;
 }
 
 /*# sourceMappingURL=main.css.map */

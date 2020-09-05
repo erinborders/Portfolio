@@ -66,16 +66,22 @@ section {
 
 .myprojects__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "first_image first_image . ."
-        ". . second_image second_image"
-        "third_image third_image . .";
+    grid-template-areas:
+        "first_image"
+        "second_image"
+        "third_image";
+    row-gap: 10em;
+    
 }
 
 .first__project {
     grid-area: first_image;
+
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    
 }
 
 .second__project {
@@ -84,7 +90,6 @@ section {
     text-align: right;
 
     .project__image {
-        border: 1px solid red;
         display: inline;
     }
 }
@@ -257,8 +262,39 @@ section {
 // }
 
 .moving__project {
-    max-width: 25em;
+    // max-width: 30em;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "image1 text1 text1 ."
+        ". text2 text2 image2"
+        "image3 text3 text3 .";
+    column-gap: 1em;
+
+    #portfolio__offer {
+        grid-area: image1;
+    }
+
+    #portfolio__text {
+        grid-area: text1;
+    }
+
+    #landingpage__offer {
+        grid-area: image2;
+    }
+
+    #landingpage__text {
+        grid-area: text2;
+    }
+
+    #businesspage__offer {
+        grid-area: image3;
+    }
+
+    #businesspage__text {
+        grid-area: text3;
+    }
 }
 
 @media (min-width: 46em) {
