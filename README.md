@@ -21,10 +21,11 @@
 
 9.6.20:
 - fixed header for mobile
+- created responsive navbar for mobile
+-styled about me section
 
 Future:
-- create nav bar
+- create nav bar for desktop
 - add labels on products over images with white border
 - extend white section underneath projects for testimonials
 - style contact me section
-- style about me section

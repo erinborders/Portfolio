@@ -163,7 +163,30 @@ section {
     padding: 2em;
   }
 
+}
 
+.about__me {
+  text-align: center;
+}
+
+#aboutme__title {
+  --trailing-space: 1.5em;
+}
+
+.aboutme__skills {
+  background-color: aliceblue;
+  padding: 2em;
+  text-align: center;
+  
+  & h3 + * {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.skill__images {
+  display: flex;
+  gap: 2em;
 }
 
 .separator {
