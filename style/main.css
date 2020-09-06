@@ -27,8 +27,14 @@ img {
 h1,
 h2,
 h3,
-p {
-  margin: 0;
+p,
+a,
+.btn {
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  color: #6262ff;
 }
 
 section {
@@ -94,7 +100,7 @@ section {
 }
 
 .nav__icon:hover a {
-  font-size: 1em;
+  font-size: 1.5em;
   display: block;
 }
 
@@ -125,7 +131,7 @@ section {
   text-shadow: 0 1px 2px black;
   text-align: center;
   padding: 10em 0;
-  background-image: url(https://picsum.photos/250);
+  background-image: url(https://picsum.photos/400);
   /* to fix repeating transparent image, bring in a radial gradient 
         radial-gradient(#444, #111) */
   background-size: cover;
@@ -169,10 +175,17 @@ section {
 
 .separator {
   padding: var(--padding-height, 10em) 0;
-  background-image: url(https://picsum.photos/250);
+  background-image: url(https://picsum.photos/400);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+@supports (background-blend-mode: lighten) {
+  .separator {
+    background-color: #6262ff;
+    /* allows you to blend layers - really nice for blending images and colors or gradients  */
+    background-blend-mode: lighten;
+  }
 }
 
 .featured {
