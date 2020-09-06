@@ -24,9 +24,9 @@
 - created responsive navbar for mobile
 -styled about me section
 -styled contact me section
+- extend white section underneath projects for testimonials
 
 Future:
 - create nav bar for desktop
 - add labels on products over images with white border
-- extend white section underneath projects for testimonials
-- style contact me section
+

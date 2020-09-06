@@ -168,7 +168,7 @@ section {
 }
 
 .separator {
-  padding: 10em 0;
+  padding: var(--padding-height, 10em) 0;
   background-image: url(https://picsum.photos/250);
   background-size: cover;
   background-attachment: fixed;
@@ -250,6 +250,10 @@ input {
   border-radius: 3px;
   padding: 1em;
   background: aliceblue;
+}
+
+.footer {
+  --padding-height: 2em;
 }
 
 @media (min-width: 46em) {
