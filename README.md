@@ -19,9 +19,10 @@
 - created about me section
 - added contact me section
 
+9.6.20:
+- fixed header for mobile
 
 Future:
-- fix header for mobile
 - create nav bar
 - add labels on products over images with white border
 - extend white section underneath projects for testimonials

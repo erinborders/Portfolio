@@ -74,7 +74,7 @@ section {
 }
 
 .header-title {
-  font-size: 4rem;
+  font-size: clamp(1rem, 10vw, 2rem);
   /* can also use clamp with font size if using sass  */
   line-height: 1;
   text-transform: uppercase;
