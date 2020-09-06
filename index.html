@@ -13,13 +13,15 @@
       <div class="navigator">
         <!-- <img src="images/hamburger_menu.png" alt="" class="hamburger__menu"> -->
         <div class="nav__icon">
-          <div></div>
-        </div>
-        <div class="navlink__container">
-
-          <a href="#" class="navigator__links hidden__link">test</a>
-          <a href="#" class="navigator__links hidden__link">test</a>
-          <a href="#" class="navigator__links hidden__link">test</a>
+          <div class="hamburger__menu"></div>
+          <div class="hamburger__menu"></div>
+          <div class="hamburger__menu trailing__space"></div>
+          <div class="navlink__container">
+            <a href="#aboutme__title" class="navigator__links hidden__link">About Me</a>
+            <a href="#" class="navigator__links hidden__link">Products</a>
+            <a href="#" class="navigator__links hidden__link">Projects</a>
+            <a href="#" class="navigator__links">Contact Me</a>
+          </div>
         </div>
       </div>
         <!-- TO DO: add personal image to right side and header to the left  -->
@@ -44,7 +46,7 @@
 
         <section class="about__me">
           <div class="aboutme__text">
-            <h3 class="aboutme__title">About Erin</h3>
+            <h3 id="aboutme__title">About Erin</h3>
             <p class="aboutme__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis suscipit, maiores aspernatur placeat impedit, tenetur perferendis provident laboriosam hic repudiandae, deserunt dolorem accusantium voluptatem! Et sint id cum aperiam quam?</p> 
           </div> 
               <div class="aboutme__skills">
@@ -148,29 +150,30 @@
   <script>
     AOS.init();
 
-    let menu = document.querySelector(".nav__icon")
-    let header = document.querySelector(".hero")
-    let navLinks = document.querySelectorAll(".navigator__links")
+    // let menu = document.querySelector(".nav__icon")
+    // let header = document.querySelector(".hero")
+    // let navLinks = document.querySelectorAll(".navigator__links")
     
-    let showNavLinks = function () { 
+    // let showNavLinks = function () { 
+    //   console.log(navLinks)
+    //   if(navLinks[0].classList.contains("hidden__link")){
+    //     navLinks.forEach(e => {
+    //       e.classList.remove("hidden__link")
+    //       e.classList.add("show__link")
+    //     })
+    //   } 
+    // }
 
-      if(navLinks[0].classList.contains("hidden__link")){
-        navLinks.forEach(e => {
-          e.classList.remove("hidden__link")
-          e.classList.add("show__link")
-        })
-      } 
-    }
+    // let hideNavLinks = function () {
+    //   // console.log(navLinks)
+    //   navLinks.forEach(e => {
+    //       e.classList.remove("show__link")
+    //       e.classList.add("hidden__link")
+    //     })
+    // }
 
-    let hideNavLinks = function () {
-      navLinks.forEach(e => {
-          e.classList.remove("show__link")
-          e.classList.add("hidden__link")
-        })
-    }
-
-    menu.addEventListener("mouseover", showNavLinks);
-    menu.addEventListener("mouseleave", hideNavLinks);
+    // menu.addEventListener("click", showNavLinks);
+    // menu.addEventListener("click", hideNavLinks);
 
   </script>
 </html>

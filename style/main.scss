@@ -40,15 +40,6 @@ section {
   padding: 5em 0;
 }
 
-// main {
-//     background-color: grey;
-// }
-
-// .main__container {
-//     background-color: white;
-//     margin: 2em;
-// }
-
 .container {
   width: 85%;
   /* 65 * 16 will translate em to pixels  */
@@ -91,70 +82,56 @@ section {
   opacity: 0.9;
 }
 
-// .hamburger__menu {
-//   // background: aliceblue;
-//   padding: 0.5em;
-//   display: block;
-//   position: absolute;
-// }
-
-.nav__icon {
-  margin: 1em;
+.hamburger__menu {
+  // background: black;
+  height: 1em;
+  border-bottom: 0.25em solid black;
+  border-radius: 2px;
+  margin: 0 1em;
   width: 2em;
+
 }
 
-.nav__icon:after, .nav__icon:before, .nav__icon div {
-  content: '';
-  background-color: black; // creates hamburger menu lines
-  border-radius: 3px;
+.trailing__space {
+  margin-bottom: 0.5em;
+}
+
+.nav__icon a {
+  font-size: 0;
+  transition: 0.25s ease-in-out;
   display: block;
-  height: 0.25em; // so you can actually see them
-  margin: 0.5em 0;
-  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-// icon animation
-.nav__icon:hover:before {
-  transform: translateY(12px) rotate(135deg);
+.nav__icon:hover {
+  a {
+    font-size: 1em;
+    display: block;
+  }
 }
 
-.nav__icon:hover:after {
-  transform: translateY(-12px) rotate(-135deg);
-}
-
-.nav__icon:hover div {
-  transform: scale(0);
+.navigator__links:hover {
+  background: rgb(209, 233, 255);
 }
 
 .show__link {
   // opacity: 1;
   // transition: opacity 0.5s ease-in-out;
-  display: inline-block;
+  display: block;
 }
 
 
 .hidden__link {
-  display: none;
+  // display: none;
   // opacity: 0;
   // transition: 0.5s ease-in-out;
 }
 
 .navigator {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 }
-
-.navlink__container {
-  display: flex;
-  gap: 2em;
-  align-items: center;
-
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-}
-
 
 .header-title {
   font-size: clamp(1rem, 10vw, 2rem);
@@ -186,7 +163,7 @@ section {
   background-image: url(https://picsum.photos/250);
   /* to fix repeating transparent image, bring in a radial gradient 
         radial-gradient(#444, #111) */
-  background-size: cover;
+        background-size: cover;
   // can be nested inside because using sass but otherwise it would be outside
   @supports (background-blend-mode: lighten) {
     background-color: rgb(98, 98, 255);
@@ -197,7 +174,7 @@ section {
   // a parallax scroll effect
   background-attachment: fixed;
   background-repeat: no-repeat;
-
+  
   .container {
     border: 2px solid white;
     padding: 2em;
@@ -219,7 +196,7 @@ section {
 .featured {
   // just to separate it a bit from the next section
   background: aliceblue;
-
+  
   &__project {
     // so this is for everything with the class featured__project
     position: relative; // because we're going to have pseudo elements that come into play
@@ -236,7 +213,7 @@ section {
         opacity: 1; // turns project details on and off
       }
     }
-
+    
     &::after {
       // anytime you have a pseudo element you have to give it content so it exists
       content: "";
@@ -249,7 +226,7 @@ section {
       z-index: -1;
     }
   }
-
+  
   &__details {
     opacity: 0;
     transition: opacity 250ms linear;
@@ -267,9 +244,9 @@ section {
 .moving__project {
     display: flex;
     justify-content: center;
-}
+  }
 
-.project__image {
+  .project__image {
 
 }
 
@@ -290,12 +267,12 @@ section {
     line-height: 1em;
     margin: 0.5em auto;
   }
-
+  
   &__text {
       display: none;
-  }
+    }
 
-}
+  }
 
 .moving__project {
     margin: 0;
@@ -303,27 +280,27 @@ section {
 
 // an example of changing the custom variable
 // .first {
-//     --clr-accent: red;
+  //     --clr-accent: red;
 // }
 
 @media (min-width: 46em) {
-
+  
     .project__text {
         display: block;
-    }
+      }
 
-    .image__container {
+      .image__container {
         height: 100%;
         width: 100%;
         object-fit: contain;
     }
 
-  .myprojects__container {
+    .myprojects__container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "first_image"
+    "first_image"
       "second_image"
       "third_image";
     row-gap: 10em;
@@ -335,7 +312,7 @@ section {
     // display: grid;
     // grid-template-columns: 1fr 1fr;
   }
-
+  
   .second__project {
     grid-area: second_image;
     justify-self: end;
@@ -349,14 +326,14 @@ section {
   .third__project {
     grid-area: third_image;
   }
-
+  
   .moving__project {
     // max-width: 30em;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "image1 text1 text1 ."
+    "image1 text1 text1 ."
       ". text2 text2 image2"
       "image3 text3 text3 .";
     column-gap: 1em;
@@ -376,7 +353,7 @@ section {
     #landingpage__text {
       grid-area: text2;
     }
-
+    
     #businesspage__offer {
       grid-area: image3;
     }
@@ -386,3 +363,31 @@ section {
     }
   }
 }
+
+// .nav__icon {
+//   margin: 1em;
+//   width: 2em;
+// }
+
+// .nav__icon:after, .nav__icon:before, .nav__icon .hamburger__menu {
+//   content: '';
+//   background-color: black; // creates hamburger menu lines
+//   border-radius: 3px;
+//   display: block;
+//   height: 0.25em; // so you can actually see them
+//   margin: 0.5em 0;
+//   transition: all 0.5s ease-in-out;
+// }
+
+// // icon animation
+// .nav__icon:hover:before {
+//   transform: translateY(12px) rotate(135deg);
+// }
+
+// .nav__icon:hover:after {
+//   transform: translateY(-12px) rotate(-135deg);
+// }
+
+// .nav__icon:hover .hamburger__menu {
+//   transform: scale(0);
+// }
