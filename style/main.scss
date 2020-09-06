@@ -18,8 +18,8 @@ body {
 }
 
 .image__container {
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     // object-fit: contain;
 }
 
@@ -252,9 +252,6 @@ section {
     justify-content: center;
   }
 
-  .project__image {
-
-}
 
 .project {
   background: radial-gradient(white, aliceblue);
