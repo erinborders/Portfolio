@@ -10,8 +10,12 @@
 - staggered products for wider screens 
 - replace product images
 
+9.5.20:
+
+
 
 Future:
+- fix header for mobile
 - create nav bar
 - switch projects and products
 - add labels on products over images with white border
