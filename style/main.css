@@ -202,10 +202,21 @@ section {
   text-decoration: none;
   text-align: center;
 }
+.featured__project .project__label {
+  opacity: 0;
+  position: absolute;
+  top: 5em;
+  left: 4.25em;
+  border: 2px solid aliceblue;
+  color: white;
+  font-weight: 700;
+  padding: 1em;
+  transition: opacity 0.5s ease-in-out;
+}
 .featured__project:hover, .featured__project:focus {
   transform: scale(1);
 }
-.featured__project:hover .featured__details, .featured__project:focus .featured__details {
+.featured__project:hover .project__label, .featured__project:focus .project__label {
   opacity: 1;
 }
 .featured__project::after {
@@ -213,7 +224,7 @@ section {
   top: -1.75rem;
   left: -1.75rem;
   position: absolute;
-  padding: 19rem 19rem 3rem 0;
+  padding: 19rem 19rem 0 0;
   background: white;
   z-index: -1;
 }
@@ -221,6 +232,7 @@ section {
   opacity: 0;
   transition: opacity 250ms linear;
   text-align: center;
+  font-size: 1px;
 }
 .featured__details span {
   display: block;

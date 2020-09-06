@@ -226,13 +226,30 @@ section {
     text-decoration: none;
     text-align: center;
 
+    .project__label {
+      opacity: 0;
+      position: absolute;
+      top: 5em;
+      left: 4.25em;
+      border: 2px solid aliceblue;
+      color: white;
+      font-weight: 700;
+      padding: 1em;
+      transition: opacity 0.5s ease-in-out;
+    }
+
     &:hover,
     &:focus {
       transform: scale(1);
 
       .featured__details {
-        opacity: 1; // turns project details on and off
+        // opacity: 1; turns project details on and off
       }
+
+      .project__label {
+        opacity: 1;
+      }
+   
     }
     
     &::after {
@@ -241,7 +258,7 @@ section {
       top: -1.75rem;
       left: -1.75rem;
       position: absolute; // which is why we gave the other element a relative position
-      padding: 19rem 19rem 3rem 0; // square
+      padding: 19rem 19rem 0 0; // square
       // border-radius: 50%;  round off the edges to a circle
       background: white;
       z-index: -1;
@@ -252,7 +269,7 @@ section {
     opacity: 0;
     transition: opacity 250ms linear;
     text-align: center;
-    // padding-right: 1em;
+    font-size: 1px;
 
     span {
       display: block;
@@ -260,6 +277,8 @@ section {
       font-size: 1rem;
     }
   }
+
+  
 }
 
 .moving__project {
