@@ -23,6 +23,7 @@
 - fixed header for mobile
 - created responsive navbar for mobile
 -styled about me section
+-styled contact me section
 
 Future:
 - create nav bar for desktop

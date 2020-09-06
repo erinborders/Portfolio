@@ -236,6 +236,22 @@ section {
   margin: 0;
 }
 
+.contact__me {
+  text-align: center;
+}
+
+.contactme__text {
+  padding: 2em 1em;
+  border: 1px solid #b4dcff;
+}
+
+input {
+  border: 1px solid #b4dcff;
+  border-radius: 3px;
+  padding: 1em;
+  background: aliceblue;
+}
+
 @media (min-width: 46em) {
   .project__text {
     display: block;

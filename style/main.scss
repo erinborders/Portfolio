@@ -284,6 +284,22 @@ section {
     margin: 0;
 }
 
+.contact__me {
+  text-align: center;
+}
+
+.contactme__text {
+  padding: 2em 1em;
+  border: 1px solid rgb(180, 220, 255);
+}
+
+input {
+  border: 1px solid rgb(180, 220, 255);
+  border-radius: 3px;
+  padding: 1em;
+  background: aliceblue;
+}
+
 // an example of changing the custom variable
 // .first {
   //     --clr-accent: red;
