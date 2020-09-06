@@ -226,7 +226,7 @@ section {
       top: -1.75rem;
       left: -1.75rem;
       position: absolute; // which is why we gave the other element a relative position
-      padding: 19rem 19rem 0 0; // square
+      padding: 19rem 19rem 3rem 0; // square
       // border-radius: 50%;  round off the edges to a circle
       background: white;
       z-index: -1;
@@ -237,7 +237,7 @@ section {
     opacity: 0;
     transition: opacity 250ms linear;
     text-align: center;
-    padding-right: 3em;
+    // padding-right: 1em;
 
     span {
       display: block;

@@ -196,7 +196,7 @@ section {
   top: -1.75rem;
   left: -1.75rem;
   position: absolute;
-  padding: 19rem 19rem 0 0;
+  padding: 19rem 19rem 3rem 0;
   background: white;
   z-index: -1;
 }
@@ -204,7 +204,6 @@ section {
   opacity: 0;
   transition: opacity 250ms linear;
   text-align: center;
-  padding-right: 3em;
 }
 .featured__details span {
   display: block;
