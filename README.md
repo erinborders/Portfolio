@@ -25,9 +25,10 @@
 -styled about me section
 -styled contact me section
 - extend white section underneath projects for testimonials
+- add button at bottom to scroll to top
 
 Future:
 - create nav bar for desktop
 - add labels on products over images with white border
-- add button at bottom to scroll to top
+
 

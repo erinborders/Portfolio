@@ -11,6 +11,10 @@
 
 /* start off css designing for mobile and try to design generic/reusable
  classes first */
+ 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -310,6 +314,23 @@ input {
 
 .footer {
   --padding-height: 2em;
+}
+
+.scroll {
+
+  &__btn{
+    background: rgba(240, 248, 255, 0.68);
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 40px;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    left: 1em;
+    bottom: 1em;
+  }
+
 }
 
 // an example of changing the custom variable

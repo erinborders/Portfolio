@@ -10,6 +10,10 @@
  the image max width and display, and margin for h1,2,3 and p  */
 /* start off css designing for mobile and try to design generic/reusable
  classes first */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   line-height: 1.5;
@@ -267,6 +271,19 @@ input {
 
 .footer {
   --padding-height: 2em;
+}
+
+.scroll__btn {
+  background: rgba(240, 248, 255, 0.68);
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 40px;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
 }
 
 @media (min-width: 46em) {
