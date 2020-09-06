@@ -18,9 +18,9 @@
           <div class="hamburger__menu trailing__space"></div>
           <div class="navlink__container">
             <a href="#aboutme__title" class="navigator__links hidden__link">About Me</a>
-            <a href="#" class="navigator__links hidden__link">Products</a>
-            <a href="#" class="navigator__links hidden__link">Projects</a>
-            <a href="#" class="navigator__links">Contact Me</a>
+            <a href="#products__title" class="navigator__links hidden__link">Products</a>
+            <a href="#projects__title" class="navigator__links hidden__link">Projects</a>
+            <a href="#contactme__title" class="navigator__links">Contact Me</a>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
         </section>
 
         <section class="myprojects">
-            <h2 class="section-title">Products</h2>
+            <h2 id="products__title" class="section-title">Products</h2>
           <div class="container myprojects__container">
               <articles class="spacing first__project">
                 <div data-aos="fade-right" class="moving__project">
@@ -111,7 +111,7 @@
 
       <section class="featured">
         <div class="container">
-          <h2 class="section-title">Featured projects</h2>
+          <h2 id="projects__title" class="section-title">Featured projects</h2>
           <div class="column">
             <!-- did this with a.featured__item*3>img+p.featured__details  -->
             <!-- to write things in multiple places at once, click on each thing where you want to write while holding alt -->
@@ -135,7 +135,7 @@
 
       <section class="contact__me">
         <div class="contactme__text">
-          <h3 class="contactme__title">Contact Me</h3>
+          <h3 id="contactme__title">Contact Me</h3>
           <p class="contactme__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nihil consequatur ad ipsum corporis cumque reprehenderit! Veniam magnam odio eligendi cum expedita? Odio neque, expedita quo dolorem eius officia animi.</p>
           <img src="https://picsum.photos/250" alt="" class="contactme__image">
           <input class="contactme__input" type="text">
@@ -149,31 +149,5 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-
-    // let menu = document.querySelector(".nav__icon")
-    // let header = document.querySelector(".hero")
-    // let navLinks = document.querySelectorAll(".navigator__links")
-    
-    // let showNavLinks = function () { 
-    //   console.log(navLinks)
-    //   if(navLinks[0].classList.contains("hidden__link")){
-    //     navLinks.forEach(e => {
-    //       e.classList.remove("hidden__link")
-    //       e.classList.add("show__link")
-    //     })
-    //   } 
-    // }
-
-    // let hideNavLinks = function () {
-    //   // console.log(navLinks)
-    //   navLinks.forEach(e => {
-    //       e.classList.remove("show__link")
-    //       e.classList.add("hidden__link")
-    //     })
-    // }
-
-    // menu.addEventListener("click", showNavLinks);
-    // menu.addEventListener("click", hideNavLinks);
-
   </script>
 </html>

@@ -82,7 +82,7 @@ section {
 }
 
 .trailing__space {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--trailing-space, 1em);
 }
 
 .nav__icon a {
@@ -100,10 +100,6 @@ section {
 
 .navigator__links:hover {
   background: #d1e9ff;
-}
-
-.show__link {
-  display: block;
 }
 
 .header-title {

@@ -93,7 +93,7 @@ section {
 }
 
 .trailing__space {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--trailing-space, 1em);
 }
 
 .nav__icon a {
@@ -115,23 +115,6 @@ section {
   background: rgb(209, 233, 255);
 }
 
-.show__link {
-  // opacity: 1;
-  // transition: opacity 0.5s ease-in-out;
-  display: block;
-}
-
-
-.hidden__link {
-  // display: none;
-  // opacity: 0;
-  // transition: 0.5s ease-in-out;
-}
-
-.navigator {
-  // display: flex;
-  // justify-content: space-between;
-}
 
 .header-title {
   font-size: clamp(1rem, 10vw, 2rem);
