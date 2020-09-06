@@ -9,19 +9,34 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <header class="hero"> 
-        <!-- TO DO: add personal image to right side and header to the left  -->
-      <div class="container spacing">
-        <!-- shortcut to create this was h1.main-text+p+a.btn -->
-        <h1 class="header-title">Erin Borders</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          mollitia aperiam eligendi fugit distinctio, est modi reiciendis, ullam
-          fugiat hic, illum commodi. Cupiditate quod dolores eum, laboriosam at
-          blanditiis repellat?
-        </p>
-        <a href="#" class="btn">See my resume</a>
+    <header class=""> 
+      <div class="navigator">
+        <!-- <img src="images/hamburger_menu.png" alt="" class="hamburger__menu"> -->
+        <div class="nav__icon">
+          <div></div>
+        </div>
+        <div class="navlink__container">
+
+          <a href="#" class="navigator__links hidden__link">test</a>
+          <a href="#" class="navigator__links hidden__link">test</a>
+          <a href="#" class="navigator__links hidden__link">test</a>
+        </div>
       </div>
+        <!-- TO DO: add personal image to right side and header to the left  -->
+        <div class="hero">
+
+          <div class="container spacing">
+            <!-- shortcut to create this was h1.main-text+p+a.btn -->
+            <h1 class="header-title">Erin Borders</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              mollitia aperiam eligendi fugit distinctio, est modi reiciendis, ullam
+              fugiat hic, illum commodi. Cupiditate quod dolores eum, laboriosam at
+              blanditiis repellat?
+            </p>
+            <a href="#" class="btn">See my resume</a>
+          </div>
+        </div>
     </header>
     
     <main>
@@ -132,5 +147,30 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    let menu = document.querySelector(".nav__icon")
+    let header = document.querySelector(".hero")
+    let navLinks = document.querySelectorAll(".navigator__links")
+    
+    let showNavLinks = function () { 
+
+      if(navLinks[0].classList.contains("hidden__link")){
+        navLinks.forEach(e => {
+          e.classList.remove("hidden__link")
+          e.classList.add("show__link")
+        })
+      } 
+    }
+
+    let hideNavLinks = function () {
+      navLinks.forEach(e => {
+          e.classList.remove("show__link")
+          e.classList.add("hidden__link")
+        })
+    }
+
+    menu.addEventListener("mouseover", showNavLinks);
+    menu.addEventListener("mouseleave", hideNavLinks);
+
   </script>
 </html>

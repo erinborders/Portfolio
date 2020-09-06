@@ -73,6 +73,56 @@ section {
   opacity: 0.9;
 }
 
+.nav__icon {
+  margin: 1em;
+  width: 2em;
+}
+
+.nav__icon:after, .nav__icon:before, .nav__icon div {
+  content: "";
+  background-color: black;
+  border-radius: 3px;
+  display: block;
+  height: 0.25em;
+  margin: 0.5em 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav__icon:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.nav__icon:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.nav__icon:hover div {
+  transform: scale(0);
+}
+
+.show__link {
+  display: inline-block;
+}
+
+.hidden__link {
+  display: none;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlink__container {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+.navlink__container a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .header-title {
   font-size: clamp(1rem, 10vw, 2rem);
   /* can also use clamp with font size if using sass  */

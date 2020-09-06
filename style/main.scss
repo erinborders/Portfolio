@@ -91,6 +91,71 @@ section {
   opacity: 0.9;
 }
 
+// .hamburger__menu {
+//   // background: aliceblue;
+//   padding: 0.5em;
+//   display: block;
+//   position: absolute;
+// }
+
+.nav__icon {
+  margin: 1em;
+  width: 2em;
+}
+
+.nav__icon:after, .nav__icon:before, .nav__icon div {
+  content: '';
+  background-color: black; // creates hamburger menu lines
+  border-radius: 3px;
+  display: block;
+  height: 0.25em; // so you can actually see them
+  margin: 0.5em 0;
+  transition: all 0.5s ease-in-out;
+}
+
+// icon animation
+.nav__icon:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.nav__icon:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.nav__icon:hover div {
+  transform: scale(0);
+}
+
+.show__link {
+  // opacity: 1;
+  // transition: opacity 0.5s ease-in-out;
+  display: inline-block;
+}
+
+
+.hidden__link {
+  display: none;
+  // opacity: 0;
+  // transition: 0.5s ease-in-out;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlink__container {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+
 .header-title {
   font-size: clamp(1rem, 10vw, 2rem);
   /* can also use clamp with font size if using sass  */
