@@ -387,7 +387,7 @@ input {
 
 @media (min-width: 46em) {
 
-  .column > .aboutme__text {
+  .column > .aboutme__text, .column > .contactme__text {
     flex-basis: 50%;
   }
 
