@@ -179,7 +179,7 @@ section {
 }
 
 .separator {
-  padding: var(--padding-height, 10em) 0;
+  padding: var(--padding-height, 6em) 0;
   background-image: url(https://picsum.photos/400);
   background-size: cover;
   background-attachment: fixed;
@@ -344,6 +344,13 @@ input {
 
   .product__label {
     display: none;
+  }
+
+  .separator {
+    --padding-height: 9em;
+  }
+  .separator.footer {
+    --padding-height: 3em;
   }
 
   .project__text {
