@@ -28,6 +28,9 @@
 - add button at bottom to scroll to top
 - add labels on products/projects over images with white border
 
+9.7.20:
+
+
 Future:
 - create nav bar for desktop
 

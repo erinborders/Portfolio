@@ -324,6 +324,28 @@ input {
 }
 
 @media (min-width: 46em) {
+  .column > .aboutme__text {
+    flex-basis: 50%;
+  }
+
+  .hamburger__menu {
+    display: none;
+  }
+
+  .navlink__container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav__icon a {
+    font-size: 1em;
+    display: inline;
+  }
+
+  .product__label {
+    display: none;
+  }
+
   .project__text {
     display: block;
   }
