@@ -402,6 +402,13 @@ input {
   .moving__project #businesspage__text {
     grid-area: text3;
   }
+
+  .featured__project .project__label {
+    left: 6.25em;
+  }
+  .featured__project::after {
+    left: 0.1em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

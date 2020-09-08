@@ -486,6 +486,17 @@ input {
       grid-area: text3;
     }
   }
+
+  .featured__project {
+
+    .project__label {
+      left: 6.25em;
+    }
+
+    &::after{
+      left: 0.1em;
+    }
+  }
 }
 
 // .nav__icon {
