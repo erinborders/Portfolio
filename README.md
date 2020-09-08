@@ -29,9 +29,14 @@
 - add labels on products/projects over images with white border
 
 9.7.20:
-
+- created nav bar for desktop
+- adjusted about and contact me sections for desktop
+- fixed featured project background and labels
 
 Future:
-- create nav bar for desktop
+- dark theme
+- personalize info
 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/37d13963-e595-48f8-96ae-8ed1b72e6261/deploy-status)](https://app.netlify.com/sites/erinborders/deploys)
 
